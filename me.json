@@ -1,1 +1,5 @@
-
+{
+  "name": "Jeffrey", 
+  "age": 32, 
+  "hobbies": ["coding", "eating", "sleeping", "football", "gaming"]
+}
