@@ -10,5 +10,6 @@
     "street": "Fake street 3",
     "city": "Hillerød",
     "zipcode": 3400
-  }
+  },
+  "filetype": "Json"
 }
