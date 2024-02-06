@@ -1,5 +1,14 @@
 {
-  "name": "Jeffrey", 
-  "age": 32, 
-  "hobbies": ["coding", "eating", "sleeping", "football", "gaming"]
+  "firtname": "Jeffrey",
+  "surname": "Roed",
+  "age": 32,
+  "height": 185,
+  "Married": true,
+  "children": 3,
+  "hobbies": ["gaming", "programming", "cooking"],
+  "address": {
+    "street": "Fake street 3",
+    "city": "Hillerød",
+    "zipcode": 3400
+  }
 }
