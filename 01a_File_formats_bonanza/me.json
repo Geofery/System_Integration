@@ -5,7 +5,11 @@
   "height": 185,
   "Married": true,
   "children": 3,
-  "hobbies": ["gaming", "programming", "cooking"],
+  "hobbies": [
+    "gaming",
+    "programming",
+    "cooking"
+  ],
   "address": {
     "street": "Fake street 3",
     "city": "Hillerød",
