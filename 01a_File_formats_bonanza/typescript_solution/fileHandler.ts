@@ -5,8 +5,7 @@ import { printXmlFile } from './readXMLFile';
 import { printYamlFile } from './readYamlFile';
 
 export const readFile = async (filePath: string) => {
-    const parts = filePath.split('.');
-    switch (parts[parts.length - 1]) {
+    switch (splitFilePath(filePath)) {
         case 'txt':
             printTxtFile(filePath);
             break;
@@ -23,4 +22,8 @@ export const readFile = async (filePath: string) => {
             printYamlFile(filePath);
             break;
     }
+};
+
+const splitFilePath = (filePath: string) => {
+    return filePath.split('.')[1];
 };

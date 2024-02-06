@@ -1,8 +1,8 @@
 import * as fs from 'fs';
 
 const readJsonFile = async (filePath: string): Promise<any> => {
-    const resposne = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(resposne);
+    const jsonData = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(jsonData);
 };
 
 export const printJsonFile = async (filePath: string) => {

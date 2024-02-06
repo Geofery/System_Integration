@@ -1,4 +1,4 @@
-import {readFile} from './fileHandler';
+import { readFile } from './fileHandler';
 
 const txtFilePath = '01a_File_formats_bonanza/me.txt';
 const csvFilePath = '01a_File_formats_bonanza/me.csv';

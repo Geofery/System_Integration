@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as xml2js from 'xml2js';
 
-export const readXmlFile = (filePath: string): Promise<any> => {
+const readXmlFile = (filePath: string): Promise<any> => {
     return new Promise((resolve, reject) => {
         fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
