@@ -16,7 +16,7 @@ export const readCsvFile = async (filePath: string): Promise<any[]> => {
 export const printCsvFile = async (filePath: string) => {
     try {
         const csvData = await readCsvFile(filePath);
-        console.log('TXT Data:', csvData[0]);
+        console.log('CSV Data:', csvData[0]);
     } catch (error) {
         console.error('Error:', error);
     }

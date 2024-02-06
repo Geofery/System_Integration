@@ -20,7 +20,7 @@ export const readXmlFile = (filePath: string): Promise<any> => {
     });
 };
 
-export const printXmlFile =async (filePath:string) => {
+export const printXmlFile = async (filePath: string) => {
     try {
         const xmlData = await readXmlFile(filePath);
         console.log('XML Data:', xmlData);

@@ -18,7 +18,7 @@ const readYamlFile = (filePath: string): Promise<any> => {
     });
 };
 
-export const printYamlFile =async (filePath:string) => {
+export const printYamlFile = async (filePath: string) => {
     try {
         const yamlData = await readYamlFile(filePath);
         console.log('Yaml Data:', yamlData);
