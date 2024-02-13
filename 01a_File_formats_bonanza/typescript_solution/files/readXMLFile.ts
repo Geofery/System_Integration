@@ -28,3 +28,11 @@ export const printXmlFile = async (filePath: string) => {
         console.error('Error:', error);
     }
 };
+
+export const getXmlFile = async (filePath: string) => {
+    try {
+        return await readXmlFile(filePath);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};

@@ -21,3 +21,11 @@ export const printCsvFile = async (filePath: string) => {
         console.error('Error:', error);
     }
 };
+
+export const getCsvFile = async (filePath: string) => {
+    try {
+        return await readCsvFile(filePath[0]);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};

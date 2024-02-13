@@ -20,3 +20,11 @@ export const printTxtFile = async (filePath: string) => {
         console.error('Error reading TXT file:', error);
     }
 };
+
+export const getTxtFile = async (filePath: string) => {
+    try {
+        return await readTxtFile(filePath);
+    } catch (error) {
+        console.log('Error reading TXT file: ', error);
+    }
+};

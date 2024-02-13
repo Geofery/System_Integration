@@ -1,4 +1,10 @@
-import { readFile } from './fileHandler';
+import express from 'express';
+import { readFile } from './utils/fileHandler';
+import fileRouter from './routes/fileRoute';
+
+const app = express();
+
+app.use(fileRouter)
 
 const txtFilePath = '01a_File_formats_bonanza/me.txt';
 const csvFilePath = '01a_File_formats_bonanza/me.csv';

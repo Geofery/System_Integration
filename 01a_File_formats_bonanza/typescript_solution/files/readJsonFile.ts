@@ -13,3 +13,11 @@ export const printJsonFile = async (filePath: string) => {
         console.error('Error:', error);
     }
 };
+
+export const getJsonFile = async (filePath: string) => {
+    try {
+        return await readJsonFile(filePath);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
