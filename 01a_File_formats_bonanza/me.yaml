@@ -1,0 +1,14 @@
+#me
+Jeffrey:
+  firstname: Jeffrey
+  surname: Roed
+  age: 32
+  married: true
+  children: 3
+  hobbies: 
+    - coding
+    - eating
+    - sleeping
+    - gaming
+
+  filetype: yaml
