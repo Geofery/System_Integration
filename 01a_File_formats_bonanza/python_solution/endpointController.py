@@ -1,11 +1,13 @@
-from fastapi import FastAPI 
+from fastapi import FastAPI, HTTPException
 import requests
 
 app = FastAPI()
-#uvicorn endpointController:app --reload 
-#fileFormats = ["csv", "yaml", "txt", "xml", "json"]
+acceptable_formats = ["csv", "json", "xml", "txt", "yaml"]
 
 @app.get("/{fileformat}")
 async def get_express_data(fileformat: str):
-    request = requests.get(f'http://127.0.0.1:3000/{fileformat}').json()
-    return request
+    [response := requests.get(f'http://127.0.0.1:3000/{fileformat}').json() for _ in [None] if fileformat.lower() in acceptable_formats]
+    if "response" in locals():
+        return response
+    else:
+        raise HTTPException(status_code=404, detail="Valid fileformats are: csv, json, xml, txt or yaml")
