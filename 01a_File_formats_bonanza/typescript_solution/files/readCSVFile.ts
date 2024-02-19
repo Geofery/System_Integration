@@ -24,7 +24,7 @@ export const printCsvFile = async (filePath: string) => {
 
 export const getCsvFile = async (filePath: string) => {
     try {
-        return await readCsvFile(filePath);
+        return JSON.parse(JSON.stringify({data:await readCsvFile(filePath)}));
     } catch (error) {
         console.error('Error:', error);
     }

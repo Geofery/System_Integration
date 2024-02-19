@@ -29,7 +29,7 @@ export const printYamlFile = async (filePath: string) => {
 
 export const getYamlFile = async (filePath: string) => {
     try {
-        return await readYamlFile(filePath);
+        return JSON.parse(JSON.stringify({data:await readYamlFile(filePath)}));
     } catch (error) {
         console.error('Error reading yaml file:', error);
     }
