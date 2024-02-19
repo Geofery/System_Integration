@@ -8,5 +8,6 @@ fileRouter.get('/txt', fileController.getTxtFile)
 fileRouter.get('/json', fileController.getJsonFile)
 fileRouter.get('/xml', fileController.getXmlFile)
 fileRouter.get('/yaml', fileController.getYamlFile)
+fileRouter.get('/fastapi/:fileformat', fileController.getFileFromServer)
 
 export default fileRouter;
