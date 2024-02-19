@@ -8,7 +8,6 @@ acceptable_formats = ["csv", "json", "xml", "txt", "yaml"]
 @app.get("/express/{file_format}")
 async def get_express_data(file_format: str):
     responses = [requests.get(f'http://127.0.0.1:3000/{file_format}').json() for _ in [None] if file_format.lower() in acceptable_formats]
-    print(responses)
     if responses:
         return responses[0]
     else:
