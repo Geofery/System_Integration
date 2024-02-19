@@ -8,5 +8,4 @@ app = FastAPI()
 @app.get("/{fileformat}")
 async def get_express_data(fileformat: str):
     request = requests.get(f'http://127.0.0.1:3000/{fileformat}').json()
-    print(request)
     return request

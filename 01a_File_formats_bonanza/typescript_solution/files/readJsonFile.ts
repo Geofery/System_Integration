@@ -16,7 +16,7 @@ export const printJsonFile = async (filePath: string) => {
 
 export const getJsonFile = async (filePath: string) => {
     try {
-        return JSON.parse(JSON.stringify({data:await readJsonFile(filePath)}));
+        return JSON.parse(JSON.stringify({ data: await readJsonFile(filePath) }));
     } catch (error) {
         console.error('Error:', error);
     }

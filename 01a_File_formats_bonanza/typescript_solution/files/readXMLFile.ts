@@ -31,7 +31,7 @@ export const printXmlFile = async (filePath: string) => {
 
 export const getXmlFile = async (filePath: string) => {
     try {
-        return JSON.parse(JSON.stringify({data:await readXmlFile(filePath)}));
+        return JSON.parse(JSON.stringify({ data: await readXmlFile(filePath) }));
     } catch (error) {
         console.error('Error:', error);
     }

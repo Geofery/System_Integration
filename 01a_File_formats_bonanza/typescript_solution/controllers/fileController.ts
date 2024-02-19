@@ -2,8 +2,6 @@ import { Request, Response } from 'express';
 import { getFile } from '../utils/fileHandler'
 
 export const getCSVFile = async (req: Request, res: Response) => {
-    console.log("GETTING CSV");
-    
     res.status(200).send(await getFile('01a_File_formats_bonanza/me.csv'))
 };
 
