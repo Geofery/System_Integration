@@ -23,7 +23,7 @@ export const printTxtFile = async (filePath: string) => {
 
 export const getTxtFile = async (filePath: string) => {
     try {
-        return await readTxtFile(filePath);
+        return JSON.parse(JSON.stringify({ data: await readTxtFile(filePath) }));
     } catch (error) {
         console.log('Error reading TXT file: ', error);
     }

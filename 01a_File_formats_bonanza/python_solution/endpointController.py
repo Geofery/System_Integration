@@ -6,8 +6,7 @@ app = FastAPI()
 #fileFormats = ["csv", "yaml", "txt", "xml", "json"]
 
 @app.get("/{fileformat}")
-async def get_express_data():
-    print("GETTING CALLED")
-    request = requests.get("http://127.0.0.1:3000/csv").json
+async def get_express_data(fileformat: str):
+    request = requests.get(f'http://127.0.0.1:3000/{fileformat}').json()
     print(request)
     return request
