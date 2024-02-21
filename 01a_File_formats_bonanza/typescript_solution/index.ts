@@ -1,5 +1,4 @@
 import express from 'express';
-import { readFile } from './utils/fileHandler';
 import fileRouter from './routes/fileRoute';
 
 const app = express();
