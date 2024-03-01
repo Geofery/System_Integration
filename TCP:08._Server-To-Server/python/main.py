@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/fastapiData")
 def _():
-    return {"message": [1,2,3,4,5]}
+    return {"Message": [1,2,3,4,5]}
 
 @app.get("/requestExpress")
 def get_express_data():

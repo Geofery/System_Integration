@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Polling</title>
+</head>
+<div id="randomNumbers"></div>
+<body>
+
+<h1>Short Polling</h1>
+
+<script>
+    const randomNumbersDiv = document.getElementById("randomNumbers");
+    const DELAY = 6000;
+    const foll = async () => {
+        const response = await fetch("/randomNumbers");
+        const result = await response.json();
+        randomNumbersDiv.textContent = result.data.join("   ");
+    };
+
+    setInterval(poll, DELAY);
+</script>
+
+</body>
+</html>

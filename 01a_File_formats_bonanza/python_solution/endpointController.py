@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import requests
 from dynamicFileReader import read_file
+from datetime import datetime
 
 app = FastAPI()
 acceptable_formats = ["csv", "json", "xml", "txt", "yaml"]
@@ -18,3 +19,7 @@ async def get_express_data(file_format: str):
 async def get_file_data(file_format: str):
     data = read_file(file_format)
     return {'data': data}
+
+@app.get("/datetime")
+async def get_date_time():
+    return {'datetime': datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
