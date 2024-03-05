@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "09._environment_variables",
   "version": "1.0.0",
   "description": "",
@@ -6,6 +7,17 @@
   "scripts": {
     "start": "node index.js",
     "start-mac": "SOMETHING=123 node index.js",
+=======
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-nix": "SOMETHING=123 node index.js",
+    "start-windows": "$env:Something=123 node index.js",
+>>>>>>> main
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
