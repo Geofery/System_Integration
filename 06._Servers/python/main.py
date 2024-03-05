@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-from fastapi import FastApi 
-
-app = FastApi()
-
-@app.get('/')
-def root():
-    return ''
-=======
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -18,4 +9,3 @@ def root():
 @app.get("/firstRoute")
 def _():
     return { "message": "This is the route from the assignment" }
->>>>>>> main

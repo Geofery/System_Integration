@@ -2,12 +2,8 @@
   "name": "node",
   "version": "1.0.0",
   "description": "",
-<<<<<<< HEAD
-  "main": "app.js",
-=======
   "type": "module",
   "main": "index.js",
->>>>>>> main
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

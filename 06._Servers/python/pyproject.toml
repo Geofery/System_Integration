@@ -2,19 +2,6 @@
 name = "first-server"
 version = "0.1.0"
 description = ""
-<<<<<<< HEAD
-authors = ["Roed <Geofery10@hotmail.com>"]
-license = "MIT"
-readme = "README.md"
-packages = [{include = "first_server"}]
-
-[tool.poetry.dependencies]
-python = "^3.8"
-fastapi = "^0.109.2"
-uvicorn = "^0.27.1"
-
-
-=======
 authors = ["anderslatif <anderslatif@users.noreply.github.com>"]
 license = "MIT"
 
@@ -23,7 +10,6 @@ python = "^3.12"
 fastapi = "^0.109.2"
 uvicorn = "^0.27.1"
 
->>>>>>> main
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
