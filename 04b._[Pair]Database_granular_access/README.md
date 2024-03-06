@@ -2,6 +2,13 @@
 
 
 ### Connection string postgreSQL
+
+### Windows
+Download postgresql: [click here](https://www.postgresql.org/download/)
+### Mac
+$ brew install postgresql
+
+
 psql "sslmode=require hostaddr=34.89.136.78 user=Rasmus dbname=postgres"<br/>
 password: Rasmus1234
 
