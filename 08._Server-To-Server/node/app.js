@@ -9,7 +9,7 @@ app.get("/requestFastAPI", async (req, res) => {
 });
 
 app.get("/expressData", (req, res) => {
-    res.send({ message: "isRunning" });
+    res.send({ message: "Running" });
 });
 
 
