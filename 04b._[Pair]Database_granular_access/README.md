@@ -1,13 +1,18 @@
-### Database Granular Access Documentation
+# Database Granular Access Documentation
 
+
+### Connection string postgreSQL
 psql "sslmode=require hostaddr=34.89.136.78 user=Rasmus dbname=postgres"
 password: Rasmus1234
 
-Access to 2 tables House and City. 
-House: Read only
-City: full access
+### Tables
+| Table name      | Permission              | 
+|-----------------|-------------------------|
+| City            | Full access             |
+| House           | Read only               |
+| Country         | No access               |
 
-### Documentation postgreSQL deployed
+### Documentation postgreSQL deployment
 ![Alt text](image.png)
 ![Alt text](image-4.png)
 ![Alt text](image-2.png)
