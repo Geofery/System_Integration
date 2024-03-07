@@ -1,14 +1,12 @@
 # Database Granular Access Documentation
 
-
-### Connection string postgreSQL
-
-### Windows
+### Windows:
 Download postgresql: [click here](https://www.postgresql.org/download/)
-### Mac
-$ brew install postgresql
 
+### Mac:
+brew install postgresql
 
+### Connect postgreSQL
 psql "sslmode=require hostaddr=34.89.136.78 user=Rasmus dbname=postgres"<br/>
 password: Rasmus1234
 
