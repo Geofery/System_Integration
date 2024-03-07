@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Request
+import json
 #poetry init-n
 #poetry add uvicorn fastapi
 #poetry shell
@@ -9,5 +10,5 @@ app = FastAPI()
 @app.post("/githubwebhookjson")
 async def github_webhook(request: Request):
     data = await request.body()
-    print(data)    
+    print(json.loads(data))    
     return 
