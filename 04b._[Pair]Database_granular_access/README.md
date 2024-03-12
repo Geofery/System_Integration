@@ -16,6 +16,7 @@ password: Rasmus1234
 | city            | Full access             |
 | house           | Read only               |
 | country         | No access               |
+| user            | Read user_name          |
 
 ### city
 | Colums          | Permission              | 
@@ -37,6 +38,13 @@ password: Rasmus1234
 | country_id      | No access               |
 | country_name    | No access               |
 | inhabitants     | No access               |
+
+### user
+| Colums          | Permission              | 
+|-----------------|-------------------------|
+| user_id         | No access               |
+| user_name       | Read only               |
+
 
 
 ### Documentation postgreSQL deployment
