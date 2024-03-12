@@ -10,12 +10,34 @@ brew install postgresql
 psql "sslmode=require hostaddr=34.89.136.78 user=Rasmus dbname=postgres"<br/>
 password: Rasmus1234
 
-### Tables
+### Tables overview
 | Table name      | Permission              | 
 |-----------------|-------------------------|
-| City            | Full access             |
-| House           | Read only               |
-| Country         | No access               |
+| city            | Full access             |
+| house           | Read only               |
+| country         | No access               |
+
+### city
+| Colums          | Permission              | 
+|-----------------|-------------------------|
+| city_id         | Full access             |
+| city_name       | Full access             |
+| zipcode         | Full access             |
+
+### house
+| Colums          | Permission              | 
+|-----------------|-------------------------|
+| house_id        | Read only               |
+| house_num       | Read only               |
+| street_name     | Read only               |
+
+### country
+| Colums          | Permission              | 
+|-----------------|-------------------------|
+| country_id      | No access               |
+| country_name    | No access               |
+| inhabitants     | No access               |
+
 
 ### Documentation postgreSQL deployment
 ![Alt text](image.png)
