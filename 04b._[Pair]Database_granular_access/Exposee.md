@@ -11,7 +11,7 @@ psql "sslmode=require hostaddr=34.89.136.78 user=Rasmus dbname=postgres"<br/>
 password: Rasmus1234
 
 ### Tables overview
-| Table name      | Permission              | 
+| Table names      | Permission              | 
 |-----------------|-------------------------|
 | city            | Full access             |
 | house           | Read only               |
