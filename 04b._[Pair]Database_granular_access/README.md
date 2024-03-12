@@ -16,7 +16,7 @@ password: Rasmus1234
 | city            | Full access             |
 | house           | Read only               |
 | country         | No access               |
-| user            | Read user_name          |
+| user            | Read name               |
 
 ### city
 | Colums          | Permission              | 
