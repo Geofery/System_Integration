@@ -20,7 +20,7 @@ async def github_webhook(request: Request, response: Response):
         form_data = await request.form()
         payload = form_data['payload']
         print(payload)
-        response.status_code = 200
+        response.status_code = 201
     else: 
         response.status_code = 400
 
