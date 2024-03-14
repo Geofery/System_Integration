@@ -1,4 +1,4 @@
-### Database choice: PostgreSQL<b \>
+### Database choice: PostgreSQL<b />
 
 ### Pros:
 
