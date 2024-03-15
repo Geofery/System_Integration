@@ -70,7 +70,7 @@ async def dad_joke_unsubscribe(url: str, response: Response):
     if url:
         subscribers.remove(url)
         response.status_code = 201
-        return {"data": "What is a lawyer's farewell phrase?  I'm going to sue you!"}
+        return {"data": "What is a lawyer's farewell phrase? \nI'm going to sue you!"}
     else: 
         response.status_code = 400
         
