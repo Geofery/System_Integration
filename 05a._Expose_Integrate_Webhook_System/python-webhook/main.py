@@ -1,6 +1,24 @@
 from fastapi import FastAPI, Request, Response
-import json
-import random
+from mysql.connector import (connection)
+
+
+
+
+async def insert_event(event, url):
+    cursor = cnx.cursor()
+    query = ("INSERT INTO events (event_type, url) VALUES (%s, %s)")
+    cursor.execute(query, (event, url))
+    cnx.commit()
+    cursor.close()
+
+#Needs to be rewritten. 
+async def get_subscribers():
+    cursor = cnx.cursor()
+    query = ("SELECT * FROM events")
+    cursor.execute(query)
+    subscribers = cursor.fetchall()
+    cursor.close()
+    return subscribers
 
 #poetry init-n
 #poetry add uvicorn fastapi
@@ -9,6 +27,35 @@ import random
 
 app = FastAPI()
 subscribers = []
+
+@app.post("/payment/success")
+async def payment_success(request: Request, response: Response):
+    body = await request.json()
+    url = body.get("url")
+    await insert_event("payment_success", url)
+    return {"url": url, "event": "Payment successful"}
+
+@app.post("/payment/failed")
+async def payment_failed(request: Request, response: Response):
+    body = await request.json()
+    url = body.get("url")
+    await insert_event("payment_failed", url)
+    return {"url": url, "event": "Payment failed"}
+
+@app.post("/payment/refunded")
+async def payment_refunded(request: Request, response: Response):
+    body = await request.json()
+    url = body.get("url")
+    await insert_event("payment_refunded", url)
+    return {"url": url, "event": "Payment refunded"}
+
+
+
+
+
+
+
+
 
 @app.post("/subscribe")
 async def dad_joke_subscribe(request: Request, response: Response):
@@ -34,20 +81,17 @@ async def dad_joke_unsubscribe(request: Request, response: Response):
         response.status_code = 400
 
 @app.get("/ping")
-async def ping(request: Request):
+async def ping():
     for url in subscribers:
-        await recieved(request, url)
-        await failed(request, url)
-        await refunded(request, url)
+        await recieved()
+        await failed()
+        await refunded()
 
-@app.get("/recieved")
-async def recieved(request: Request, url: str):
+async def recieved():
         return {"data": "Payment recieved"}
 
-@app.get("failed")
-async def failed(request: Request, url: str):
+async def failed():
     return {"data": "Payment failed"}
 
-app.get("/refunded")
-async def refunded(request: Request, url: str):
+async def refunded():
     return {"data": "Payment refunded"}

@@ -10,6 +10,7 @@ packages = [{include = "python_webhook"}]
 python = "^3.8"
 uvicorn = "^0.28.0"
 fastapi = "^0.110.0"
+mysql-connector-python = "^8.3.0"
 
 
 [build-system]
