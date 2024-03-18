@@ -73,10 +73,17 @@ async def dad_joke_unsubscribe(url: str, response: Response):
         return {"data": "What is a lawyer's farewell phrase? \nI'm going to sue you!"}
     else: 
         response.status_code = 400
+
+@app.get("/Ping")
+async def ping():
+    #Needs to call all subscribers and send them a joke
+    return {"data": "Pong"}
         
 
 def supply_joke():
     ran = random.randint(0, len(dad_jokes) -1)
     return dad_jokes[ran]
+
+
 
 
