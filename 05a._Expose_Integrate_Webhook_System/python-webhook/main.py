@@ -1,8 +1,13 @@
 from fastapi import FastAPI, Request, Response
 from mysql.connector import (connection)
+from dotenv import dotenv_values
 
 
-
+env_variables = dotenv_values()
+cnx = connection.MySQLConnection(user = env_variables["USER_NAME"], password = env_variables["DB_PASSWORD"],
+                              host = env_variables["DB_HOST"],
+                              port = env_variables["DB_PORT"],
+                              database = env_variables["DB_CHOICE"])
 
 async def insert_event(event, url):
     cursor = cnx.cursor()
