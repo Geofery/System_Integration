@@ -39,8 +39,8 @@ async def get_subscribers():
     cursor.execute(query)
     subscribers = cursor.fetchall()
     cursor.close()
-    for subscriber in subscribers:
-         requests.post(subscriber[2], json={"event": subscriber[1]})
+    [requests.post(subscriber[2], json={"event": subscriber[1]}) 
+     for subscriber in subscribers]
     return {"data": "subscribers notified"} 
 
 @app.post("/payment/success")
