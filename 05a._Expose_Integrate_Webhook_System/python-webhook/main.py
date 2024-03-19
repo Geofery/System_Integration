@@ -24,6 +24,13 @@ async def insert_event(event, url):
     cnx.commit()
     cursor.close()
 
+async def unsubscribe_event(event, url):
+    cursor = cnx.cursor()
+    query = ("DELETE FROM events WHERE url = %s AND event_type = %s")
+    cursor.execute(query, (url, event))
+    cnx.commit()
+    cursor.close()
+
 #Needs to be rewritten. 
 @app.get("/ping")
 async def get_subscribers():
@@ -37,22 +44,43 @@ async def get_subscribers():
     return {"data": "subscribers notified"} 
 
 @app.post("/payment/success")
-async def payment_success(request: Request, response: Response):
+async def payment_success(request: Request):
     body = await request.json()
     url = body.get("url")
     await insert_event("payment_success", url)
     return {"url": url, "event": "Payment successful"}
 
+@app.delete("/payment/success")
+async def unsubscribe_payment_success(request: Request):
+    body = await request.json()
+    url = body.get("url")
+    await unsubscribe_event("payment_success", url)
+    return {"url": url, "event": "Unsubscribed from payment success"}
+
 @app.post("/payment/failed")
-async def payment_failed(request: Request, response: Response):
+async def payment_failed(request: Request):
     body = await request.json()
     url = body.get("url")
     await insert_event("payment_failed", url)
     return {"url": url, "event": "Payment failed"}
 
+@app.delete("/payment/failed")
+async def unsubscribe_payment_failed(request: Request):
+    body = await request.json()
+    url = body.get("url")
+    await unsubscribe_event("payment_failed", url)
+    return {"url": url, "event": "Unsubscribed from payment failed"}
+
 @app.post("/payment/refunded")
-async def payment_refunded(request: Request, response: Response):
+async def payment_refunded(request: Request):
     body = await request.json()
     url = body.get("url")
     await insert_event("payment_refunded", url)
     return {"url": url, "event": "Payment refunded"}
+
+@app.delete("/payment/refunded")
+async def unsubscribe_payment_refunded(request: Request):
+    body = await request.json()
+    url = body.get("url")
+    await unsubscribe_event("payment_refunded", url)
+    return {"url": url, "event": "Unsubscribed from payment refunded"}
