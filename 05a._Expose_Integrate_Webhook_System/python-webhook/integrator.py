@@ -16,7 +16,8 @@ async def monitoring_event():
 async def monitoring_access():
     response = requests.post("https://38dff2ed06c4c7c1df537b473b200a94.serveo.net/monitoring/access", 
     json={"url": "https://locutus.serveo.net/webhook/recieve", 
-     "password": "1234"}).json
+     "password": "1234"})
+    response = response.json
     return { "data": response }
 
 @app.post("/webhook/recieve")
