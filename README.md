@@ -2,15 +2,15 @@
 
 ### Mandatory 1
 
-[01a:](https://github.com/Geofery/System_Integration/tree/main/01a_File_formats_bonanza)
+[01a: File_formats_Bonanza 1](https://github.com/Geofery/System_Integration/tree/main/01a_File_formats_bonanza)
 
-[03a:](https://github.com/Geofery/System_Integration/tree/main/01a_File_formats_bonanza)
+[03a: File_formats_Bonanza 2](https://github.com/Geofery/System_Integration/tree/main/01a_File_formats_bonanza)
 
-[04a:](https://github.com/anderslatif/Kea_SOFT_System_Integration_2024_Spring/tree/main/13._Server-sent_Events)
+[04a: Server-sent_events](https://github.com/anderslatif/Kea_SOFT_System_Integration_2024_Spring/tree/main/13._Server-sent_Events)
 
-[04b:](https://github.com/Geofery/System_Integration/tree/main/04b._%5BPair%5DDatabase_granular_access)
+[04b:Granular_access ](https://github.com/Geofery/System_Integration/tree/main/04b._%5BPair%5DDatabase_granular_access)
 
-[05a:](https://github.com/Geofery/System_Integration/tree/main/05a._Expose_Integrate_Webhook_System)
+[05a: Webhook_system ](https://github.com/Geofery/System_Integration/tree/main/05a._Expose_Integrate_Webhook_System)
 
 
 
