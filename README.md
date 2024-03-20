@@ -1,5 +1,19 @@
 # System_Integration
 
+### Mandatory 1
+
+[01a:](https://github.com/Geofery/System_Integration/tree/main/01a_File_formats_bonanza)
+
+[03a:](https://github.com/Geofery/System_Integration/tree/main/01a_File_formats_bonanza)
+
+[04a:](https://github.com/anderslatif/Kea_SOFT_System_Integration_2024_Spring/tree/main/13._Server-sent_Events)
+
+[04b:](https://github.com/Geofery/System_Integration/tree/main/04b._%5BPair%5DDatabase_granular_access)
+
+[05a:](https://github.com/Geofery/System_Integration/tree/main/05a._Expose_Integrate_Webhook_System)
+
+
+
 ### Endpoints Express
 | Method | Url                                  | Description             | 
 |--------|--------------------------------------|-------------------------|
