@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI, Request
 from mysql.connector import (connection)
 from dotenv import dotenv_values
 import requests
