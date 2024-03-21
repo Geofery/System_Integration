@@ -85,3 +85,17 @@ async def unsubscribe_payment_refunded(request: Request):
     url = body.get("url")
     await unsubscribe_event("payment_refunded", url)
     return {"url": url, "event": "Unsubscribed from payment refunded"}
+
+@app.post("/payment/chargeback")
+async def payment_chargeback(request: Request):
+    body = await request.json()
+    url = body.get("url")
+    await insert_event("payment_chargeback", url)
+    return {"url": url, "event": "Payment chargeback"}
+
+@app.delete("/payment/chargeback")
+async def unsubscribe_payment_chargeback(request: Request):
+    body = await request.json()
+    url = body.get("url")
+    await unsubscribe_event("payment_chargeback", url)
+    return {"url": url, "event": "Unsubscribed from payment chargeback"}
