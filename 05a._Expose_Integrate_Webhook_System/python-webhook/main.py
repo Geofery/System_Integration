@@ -3,6 +3,7 @@ from mysql.connector import (connection)
 from dotenv import dotenv_values
 import requests
 
+#Commands
 #poetry init-n
 #poetry add uvicorn fastapi
 #poetry shell
