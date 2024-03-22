@@ -16,7 +16,7 @@ Create a webhook with one of the endpoints, add the body to the post.
 ### API Endpoints
 | Method   | Url                                          | Description                            | Body   |
 |----------|----------------------------------------------|----------------------------------------|--------|
-| GET      | https://locutus.serveo.net/ping              | Pings all subscribers                  |        |
+| GET      | https://locutus.serveo.net/ping              | Sends events to all subscribers        |        |
 | POST     | https://locutus.serveo.net/payment/refunded  | Subscribe on payment refund events     |    X   |
 | POST     | https://locutus.serveo.net/payment/success   | Subscribe on Payment success events    |    X   |
 | POST     | https://locutus.serveo.net/payment/failed    | Subscribe on Payment failed events     |    X   |
