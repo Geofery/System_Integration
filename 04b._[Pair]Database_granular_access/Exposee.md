@@ -8,7 +8,7 @@ brew install postgresql
 
 ### Connect postgreSQL
 psql "sslmode=require hostaddr=34.89.136.78 user=Rasmus dbname=postgres"<br/>
-password: Rasmus1234
+password:
 
 ### Tables overview
 | Table names      | Permission              | 
