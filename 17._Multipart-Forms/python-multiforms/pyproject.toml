@@ -1,15 +1,16 @@
 [tool.poetry]
-name = "python-cors"
+name = "python-multiforms"
 version = "0.1.0"
 description = ""
 authors = ["Roed <Geofery10@hotmail.com>"]
 readme = "README.md"
-packages = [{include = "python_cors"}]
+packages = [{include = "python_multiforms"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 fastapi = "^0.110.1"
 uvicorn = "^0.29.0"
+python-multipart = "^0.0.9"
 
 
 [build-system]

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <title>Forms</title>
+
+</html>
+
+<body>
+    <h2>Basic Form</h2>
+    //TODO Assignment: create a form with a username and password
+    <script>
+
+        <form>
+            <label for ="username">Username</label>
+            <input type="text" name></input>
+
+</form>
+        //ALTERNATE SOLUTION
+
+        const form = document.createElement('form');
+        form.setAttribute('method', 'POST');
+        form.setAttribute('action', 'http://localhost:8000/form');
+
+
+        const usernameInput = document.createElement('input');
+        usernameInput.setAttribute('type', 'text');
+        usernameInput.setAttribute('name', 'username');
+        usernameInput.setAttribute('placeholder', 'Username');
+
+        const passwordInput = document.createElement('input');
+        passwordInput.setAttribute('type', 'password');
+        passwordInput.setAttribute('name', 'password');
+        passwordInput.setAttribute('placeholder', 'Password');
+
+        const submitButton = document.createElement('button');
+        submitButton.setAttribute('type', 'submit');
+        submitButton.textContent = 'Submit';
+
+        form.appendChild(usernameInput);
+        form.appendChild(passwordInput);
+        form.appendChild(submitButton);
+
+        document.body.appendChild(form);
+
+
+
+        
+        <form action="http://localhost:8000/fileform" method="POST" enctype="multipart/form-data">
+            <label for="file">File:</label>
+            <input type="file" accept="image/png" name="file"></input>
+
+            <label for="description">Description:</label>
+            <input type="text" name="description"></input>
+            <input type="submit" value="Submit"></input>
+        
+            </form>
+
+    </script>
+</body>
+
+</html>
