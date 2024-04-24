@@ -3,7 +3,6 @@ import os
 
 # Define the SQLAlchemy database URL
 db_url = 'insert db url here'
-print(db_url)
 
 # Create a SQLAlchemy engine
 engine = create_engine(db_url)
