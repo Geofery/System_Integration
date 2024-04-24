@@ -1,17 +1,17 @@
 [tool.poetry]
-name = "python-multiforms"
+name = "08b-data-migrator"
 version = "0.1.0"
 description = ""
 authors = ["Roed <Geofery10@hotmail.com>"]
 readme = "README.md"
-packages = [{include = "python_multiforms"}]
+packages = [{include = "08b"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-fastapi = "^0.110.1"
-uvicorn = "^0.29.0"
-python-multipart = "^0.0.9"
-aiofiles = "^23.2.1"
+alembic = "^1.13.1"
+SQLAlchemy = "^2.0.29"
+pymysql = "^1.1.0"
+cryptography = "^42.0.5"
 
 
 [build-system]

@@ -1,64 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <title>Forms</title>
-
-</html>
-
+</head>
 <body>
     <h2>Basic Form</h2>
-    //TODO Assignment: create a form with a username and password
+    <form action="http://localhost:8080/form" method="POST">
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="password">
+
+        <input type="submit" value="Send Form Data">
+    </form>
+
+    <h2>File Form</h2>
+    <form action="http://localhost:8080/fileform" method="POST" enctype="multipart/form-data">
+        <label for="file">File</label>
+        <!-- it's possible to add multiple as an attribute -->
+        <input type="file" name="file" accept="image/*" >
+
+        <label for="description"></label>
+        <input type="text" name="description">
+
+        <input type="submit" value="Send File">
+    </form>
+
     <script>
-
-        <form>
-            <label for ="username">Username</label>
-            <input type="text" name></input>
-
-</form>
-        //ALTERNATE SOLUTION
-
-        const form = document.createElement('form');
-        form.setAttribute('method', 'POST');
-        form.setAttribute('action', 'http://localhost:8000/form');
-
-
-        const usernameInput = document.createElement('input');
-        usernameInput.setAttribute('type', 'text');
-        usernameInput.setAttribute('name', 'username');
-        usernameInput.setAttribute('placeholder', 'Username');
-
-        const passwordInput = document.createElement('input');
-        passwordInput.setAttribute('type', 'password');
-        passwordInput.setAttribute('name', 'password');
-        passwordInput.setAttribute('placeholder', 'Password');
-
-        const submitButton = document.createElement('button');
-        submitButton.setAttribute('type', 'submit');
-        submitButton.textContent = 'Submit';
-
-        form.appendChild(usernameInput);
-        form.appendChild(passwordInput);
-        form.appendChild(submitButton);
-
-        document.body.appendChild(form);
-
-
-
+        const fileInput = document.querySelector('input[type="file"]');
         
-        <form action="http://localhost:8000/fileform" method="POST" enctype="multipart/form-data">
-            <label for="file">File:</label>
-            <input type="file" accept="image/png" name="file"></input>
+        fileInput.addEventListener("change", (event) => {
+            const file = event.target.files[0];
 
-            <label for="description">Description:</label>
-            <input type="text" name="description"></input>
-            <input type="submit" value="Submit"></input>
-        
-            </form>
+            const validTypes = ["image/png", "image/svg"];
+            if (!validTypes.includes(file.type)) {
+                alert("Not a valid type");
+                fileInput.value = "";
+                return;
+            }
+
+            const maxSize = 10 * 1024 * 1024; // 10MB
+            if (file.size > maxSize) {
+                alert(`File too big, max size: ${maxSize}`);
+                fileInput.value = "";
+                return;
+            }
+
+        });
 
     </script>
-</body>
 
+</body>
 </html>
