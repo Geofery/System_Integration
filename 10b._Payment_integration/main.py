@@ -5,9 +5,9 @@ import os
 #poetry install
 #poetry shell
 #uvicorn main:app --reload
-
-SECRET_KEY = "sk_test_51PJgYSI4WnBDPekM9HB0FDIltlCCpq1ADw9vix87s8QBD42QMb8WdTVsTWRyYMVk5xtd3mixAwI7e76W9r5nofxf00A2R3LY3D"
-stripe.api_key= os.environ.get('SECRET_KEY')
+#https://dashboard.stripe.com/webhooks/create?endpoint_location=local
+SECRET_KEY = os.getenv('SECRET_STRIPE')
+stripe.api_key= SECRET_KEY
 
 def generate_card_token(cardnumber,expmonth,expyear,cvv):
     data= stripe.Token.create(
