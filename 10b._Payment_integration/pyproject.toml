@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "10b-payment-integration"
+version = "0.1.0"
+description = ""
+authors = ["Roed <Geofery10@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "10b"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^3.0.3"
+stripe = "^9.7.0"
+python-dotenv = "^1.0.1"
+uvicorn = "^0.29.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
